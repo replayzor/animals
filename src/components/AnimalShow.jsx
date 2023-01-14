@@ -25,9 +25,25 @@ function AnimalShow({ type }) {
 
 	return (
 		<div onClick={handleClick}>
-			<img src={svgMap[type]} alt={type} width="100px" height="100px" />
-			<img src={heart} alt="heart" style={{ width: 10 + 10 * clicks + "px" }} />
-			{clicks} likes
+			<div className="card">
+				<div className="card-content">
+					<div className="content">
+						<img
+							className="py-4"
+							src={svgMap[type]}
+							alt={type}
+							width="100px"
+							height="100px"
+						/>
+						<img
+							src={heart}
+							alt="heart"
+							style={{ width: 10 + 10 * clicks + "px" }}
+						/>
+						{clicks} likes
+					</div>
+				</div>
+			</div>
 		</div>
 	);
 }
